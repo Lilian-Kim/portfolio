@@ -1,7 +1,7 @@
 import React from 'react'
 
 const MemoList = () => {
-  return <div></div>
+  return <div />
 }
 
 export default MemoList
