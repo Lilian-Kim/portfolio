@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^7.2.1",
     "cross-env": "^6.0.3",
     "dotenv": "^8.2.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
     "express": "^4.17.1",
     "immer": "^5.1.0",
     "node-sass": "^4.13.0",
@@ -27,7 +29,16 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": [
+      "react-app",
+      "airbnb",
+      "prettier"
+    ],
+    "rules": {
+      "no-unused-vars": 1,
+      "no-console": 0,
+      "react/jsx-filename-extension": 0
+    }
   },
   "browserslist": {
     "production": [
