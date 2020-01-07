@@ -1,7 +1,7 @@
 import React from 'react'
 
-const MemoList = ({ children }) => {
+const MemoSide = ({ children }) => {
   return <div>{children}</div>
 }
 
-export default MemoList
+export default MemoSide
