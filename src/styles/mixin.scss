@@ -51,3 +51,12 @@ $mobile-s-width		: 375px;
 		@content;
 	}
 }
+
+//background
+@mixin background-img($position, $repeat, $size){
+	background: {
+		position: $position;
+		repeat: $repeat;
+		size: $size;
+	}
+}

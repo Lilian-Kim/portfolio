@@ -4,6 +4,9 @@ import MemoTemplate from './components/MemoTemplate'
 import MemoHeader from './components/MemoHeader'
 import MemoSide from './components/MemoSide'
 import MemoFooter from './components/MemoFooter'
+import MemoContent from './components/MemoContent'
+
+
 
 function App() {
   return (
@@ -11,7 +14,8 @@ function App() {
       <>
         <MemoTemplate>
           <MemoHeader></MemoHeader>
-          <MemoSide>사이드</MemoSide>
+          <MemoSide></MemoSide>
+          <MemoContent></MemoContent>
           <MemoFooter>푸터</MemoFooter>
         </MemoTemplate>
       </>
