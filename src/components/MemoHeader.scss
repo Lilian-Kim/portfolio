@@ -1,9 +1,10 @@
 @import '../styles/mixin.scss';
+@import '../styles/colors.scss';
 
 
 .memo-header{
     width:100%;
     height:50px;
-    border:1px solid gray;
+    border-bottom:1px solid $gray-5;
+    padding:2rem;
 }
-

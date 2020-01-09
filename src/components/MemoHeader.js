@@ -1,13 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './MemoHeader.scss'
 
 const MemoHeader = () => {
+
+  //toggle true : false시에 아이콘 변경
+  const [toggle, setToggle] = useState(false)
+  const toggleClick = () => setToggle(!toggle)
+
   return (
     <div className="memo-header">
-      {/* toggle button  */}
-      <ul>
-        <li>테스트</li>
-      </ul>
+      <button onClick={toggleClick} className={toggle ? 'close' : 'open'} >
+      {toggle ? '닫기' : '열기'}
+      </button>
     </div>
   )
 }
