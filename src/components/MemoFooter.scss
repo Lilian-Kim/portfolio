@@ -1,8 +1,11 @@
+@import '../styles/mixin.scss';
+@import '../styles/colors.scss';
+
 .footer-wrapper {
     width: 100%;
     min-height: 150px;
-    border: 1px solid red;
-    padding: 1.2rem;
+    border-top:1px solid $gray-5;
+    padding: 1rem;
 
     p {
         text-align: center;

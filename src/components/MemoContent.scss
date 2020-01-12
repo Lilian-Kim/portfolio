@@ -1,5 +1,9 @@
+@import '../styles/mixin.scss';
+@import '../styles/colors.scss';
+
 .memo-content{
     width:80%;
     //나중에 수정하기
     min-height:600px;
+    padding-top:50px;
 }
