@@ -1,11 +1,8 @@
 import React from 'react'
-
+import './MemoSide.scss'
 const MemoSide = () => {
   return (
   <div className="memo-side"> 
-    <ul>
-      <li>메모 리스트</li>
-    </ul>
   </div>
   )
 }
