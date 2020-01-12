@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import {NavLinke} from 'react-router-dom'
+
 import './MemoHeader.scss'
 
 const MemoHeader = () => {
