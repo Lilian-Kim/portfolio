@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {NavLinke} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 import './MemoHeader.scss'
 
@@ -20,7 +20,8 @@ const MemoHeader = () => {
       </div>
       <nav className="right">
         <ul>
-          <li>로그인</li>
+          <li>
+            <NavLink to="/login">로그인</NavLink></li>
           <li>회원가입</li>
         </ul>
       </nav>
