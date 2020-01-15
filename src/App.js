@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <MemoHeader></MemoHeader>
-        <Route path="/login">
+        <Route exact path="/login">
           <Login></Login>
         </Route>
         <MemoContainer>
