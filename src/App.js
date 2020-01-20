@@ -1,28 +1,26 @@
 import React from 'react'
 // import './App.scss'
 import MemoContainer from './components/MemoContainer'
-import MemoHeader from './components/MemoHeader'
+import MemoHeader from './components/common/MemoHeader'
 import MemoSide from './components/MemoSide'
-import MemoFooter from './components/MemoFooter'
+import MemoFooter from './components/common/MemoFooter'
 import MemoContent from './components/MemoContent'
 import MemoList from './components/MemoList'
-import { BrowserRouter, Route } from 'react-router-dom'
-import Login from './components/Login'
+import {Route } from 'react-router-dom'
+import LoginPage from './pages/LoginPage'
+import Home from './components/Home'
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
         <MemoHeader></MemoHeader>
-        <Route exact path="/login">
-          <Login></Login>
-        </Route>
         <MemoContainer>
-          <MemoList></MemoList>
-          <MemoContent></MemoContent>
+        <Route exact path='/'><Home /></Route>       
+        <Route exact path="/login"><LoginPage /></Route>
+          {/* <MemoList></MemoList>
+          <MemoContent></MemoContent> */}
         </MemoContainer>
         <MemoFooter>푸터</MemoFooter>
-      </BrowserRouter>
     </div>
   )
 }

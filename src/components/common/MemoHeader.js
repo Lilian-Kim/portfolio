@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {NavLink} from 'react-router-dom'
 
-import './MemoHeader.scss'
+import 'styles/common/MemoHeader.scss'
 
 const MemoHeader = () => {
   //toggle true : false시에 아이콘 변경

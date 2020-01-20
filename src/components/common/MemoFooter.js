@@ -1,5 +1,5 @@
 import React from 'react'
-import './MemoFooter.scss'
+import 'styles/common/MemoFooter.scss'
 
 const MemoFooter = () => {
   return (
