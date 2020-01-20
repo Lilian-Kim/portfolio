@@ -9,6 +9,7 @@ import MemoList from './components/MemoList'
 import {Route } from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import Home from './components/Home'
+import RegisterPage from './pages/RegisterPage'
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
         <MemoHeader></MemoHeader>
         <MemoContainer>
         <Route exact path='/'><Home /></Route>       
-        <Route exact path="/login"><LoginPage /></Route>
+        <Route path="/login"><LoginPage /></Route>        
+        <Route path="/register"><RegisterPage/></Route>        
+
           {/* <MemoList></MemoList>
           <MemoContent></MemoContent> */}
         </MemoContainer>

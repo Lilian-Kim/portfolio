@@ -18,11 +18,10 @@ const MemoHeader = () => {
       <div className="left">
         Simple Memo
       </div>
-      <nav className="right">
+      <nav className="">
         <ul>
-          <li>
-            <NavLink to="/login">로그인</NavLink></li>
-          <li>회원가입</li>
+          <li><NavLink to="/login">로그인</NavLink></li>
+          <li><NavLink to ="/register">회원가입</NavLink></li>
         </ul>
       </nav>
     </div>
