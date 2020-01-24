@@ -1,11 +1,13 @@
 import React from 'react'
+import AuthTemplate from 'components/auth/AuthTemplate'
+import AuthForm from 'components/auth/AuthForm'
 
 function LoginPage(){
 
     return(
-        <div>
-            로그인 컴포넌트
-        </div>
+        <AuthTemplate>
+            <AuthForm />
+        </AuthTemplate>
     )
 }
 
