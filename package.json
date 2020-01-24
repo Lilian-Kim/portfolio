@@ -7,6 +7,7 @@
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.19.1",
+    "classnames": "^2.2.6",
     "cross-env": "^6.0.3",
     "dotenv": "^8.2.0",
     "eslint-config-airbnb": "^18.0.1",
@@ -22,7 +23,8 @@
     "react-icons": "^3.8.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "styled-components": "^5.0.0"
   },
   "scripts": {
     "start": "cross-env NODE_PATH=src react-scripts start",
