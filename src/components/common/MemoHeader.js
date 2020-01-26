@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {NavLink} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 
 import 'styles/common/MemoHeader.scss'
 
@@ -16,7 +16,9 @@ const MemoHeader = () => {
         </button>
       </div>
       <div className="left">
+        <Link to="/">
         Simple Memo
+        </Link>
       </div>
       <nav className="">
         <ul>
