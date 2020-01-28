@@ -1,4 +1,4 @@
-import {createAction, handleActions} from 'redux-ations'
+import {createAction, handleActions} from 'redux-actions'
 
 
 const START_LOADING  = 'loading/START_LOADING'
