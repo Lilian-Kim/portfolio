@@ -1,6 +1,5 @@
 import { call, put } from 'redux-saga/effects'
 import { startLoading, finishLoading } from 'modules/loading'
-import { yieldExpression } from '@babel/types'
 
 export default function createRequestSaga(type, request) {
   const SUCCESS = `${type}_SUCCESS`
