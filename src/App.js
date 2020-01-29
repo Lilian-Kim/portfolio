@@ -1,20 +1,21 @@
 import React from 'react'
 // import './App.scss'
 import MemoContainer from './components/MemoContainer'
-import MemoHeader from './components/common/MemoHeader'
+import Header from './components/common/Header'
 import MemoSide from './components/MemoSide'
-import MemoFooter from './components/common/MemoFooter'
+import Footer from './components/common/Footer'
 import MemoContent from './components/MemoContent'
 import MemoList from './components/MemoList'
 import {Route } from 'react-router-dom'
 import LoginPage from './pages/LoginPage'
 import Home from './components/Home'
 import RegisterPage from './pages/RegisterPage'
+import HeaderContainer from './containers/common/HeaderContainer'
 
 function App() {
   return (
     <div className="App">
-        <MemoHeader></MemoHeader>
+        <HeaderContainer />
         <MemoContainer>
         <Route exact path='/'><Home /></Route>       
         <Route path="/login"><LoginPage /></Route>        
@@ -23,7 +24,7 @@ function App() {
           {/* <MemoList></MemoList>
           <MemoContent></MemoContent> */}
         </MemoContainer>
-        <MemoFooter>푸터</MemoFooter>
+        <Footer>푸터</Footer>
     </div>
   )
 }

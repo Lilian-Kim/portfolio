@@ -1,7 +1,7 @@
 import React from 'react'
-import 'styles/common/MemoFooter.scss'
+import 'styles/common/Footer.scss'
 
-const MemoFooter = () => {
+const Footer = () => {
   return (
     <footer className="footer-wrapper">
       <div>
@@ -11,4 +11,4 @@ const MemoFooter = () => {
   )
 }
 
-export default MemoFooter
+export default Footer
