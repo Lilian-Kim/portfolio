@@ -2,13 +2,16 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeField, initializeForm, register } from 'modules/auth.js'
 import AuthForm from 'components/auth/AuthForm'
+import { check } from 'modules/user'
+import {withRouter} from 'react-router-dom'
 
-const RegisterForm = () => {
+const RegisterForm = ({history}) => {
   const dispatch = useDispatch()
-  const { form, auth, authError} = useSelector(({ auth }) => ({
+  const { form, auth, authError, user } = useSelector(({ auth, user }) => ({
     form: auth.register,
     auth: auth.auth,
     authError: auth.authError,
+    user: user.user,
   }))
   //인풋 변경 이벤트 핸들러
   const onChange = e => {
@@ -24,8 +27,8 @@ const RegisterForm = () => {
 
   const onSubmit = e => {
     e.preventDefault()
-    const {name, email, password} = form
-    dispatch(register({email, password}))
+    const { name, email, password } = form
+    dispatch(register({ email, password }))
   }
 
   //컴포넌트가 처음 렌더링될 때 form초기화
@@ -34,16 +37,28 @@ const RegisterForm = () => {
   }, [dispatch])
 
   useEffect(() => {
-    if (authError){
+    if (authError) {
       console.log('오류 발생')
       console.log(authError)
       return
     }
-    if(auth){
+    if (auth) {
       console.log('회원가입 성공')
       console.log(auth)
+      dispatch(check())
     }
-  }, [auth, authError])
+  }, [auth, authError, dispatch])
+
+  //user값이 잘 설정되었는지 확인
+  useEffect(() => {
+    if (user) {
+      console.log('check api 성공')
+      console.log(user)
+      history.push('/login')
+      
+    }
+  }, [history, user])
+
   return (
     <AuthForm
       type="register"
@@ -54,4 +69,4 @@ const RegisterForm = () => {
   )
 }
 
-export default RegisterForm
+export default withRouter(RegisterForm)
