@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeField, initializeForm, register } from 'modules/auth.js'
 import AuthForm from 'components/auth/AuthForm'
@@ -6,6 +6,7 @@ import { check } from 'modules/user'
 import {withRouter} from 'react-router-dom'
 
 const RegisterForm = ({history}) => {
+  const [error, setError] = useState(null)
   const dispatch = useDispatch()
   const { form, auth, authError, user } = useSelector(({ auth, user }) => ({
     form: auth.register,
@@ -28,6 +29,11 @@ const RegisterForm = ({history}) => {
   const onSubmit = e => {
     e.preventDefault()
     const { name, email, password } = form
+    //아래 값중 하나라도 비어있다면
+    if([name, email, password].includes('')){
+      setError('빈 칸을 모두 입력하세요')
+      return
+    }
     dispatch(register({ email, password }))
   }
 
@@ -38,8 +44,14 @@ const RegisterForm = ({history}) => {
 
   useEffect(() => {
     if (authError) {
-      console.log('오류 발생')
-      console.log(authError)
+      //이미 계정이 존재
+      if (authError.response.state === 409){
+        //메세지 최종적으로 추후 수정하기
+        setError('이미 존재하는 걔정입니다.')
+        return
+      }
+      //기타
+      setError('회원가입 실패')
       return
     }
     if (auth) {
@@ -65,6 +77,7 @@ const RegisterForm = ({history}) => {
       form={form}
       onChange={onChange}
       onSubmit={onSubmit}
+      error={error}
     />
   )
 }
