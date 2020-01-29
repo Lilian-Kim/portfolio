@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import 'styles/common/Header.scss'
 
-const Header = ({ user }) => {
+const Header = ({ user, onLogout}) => {
   //toggle true : false시에 아이콘 변경
   const [toggle, setToggle] = useState(false)
   const toggleClick = () => setToggle(!toggle)
@@ -23,7 +23,7 @@ const Header = ({ user }) => {
             <>
               <li>{user.name}</li>
               <li>
-                <NavLink>로그아웃</NavLink>
+                <NavLink onClick={onLogout}>로그아웃</NavLink>
               </li>
             </>
           ) : (
