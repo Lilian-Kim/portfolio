@@ -10,7 +10,7 @@ const AuthTemplateWrapper = styled.div`
   right: 0;
   top: 0;
   right: 0;
-  background-color: #e9ecef;
+  background-color: #f1f3f5;
   display: flex;
   flex-derection: column;
   justify-content: center;
