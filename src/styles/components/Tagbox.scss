@@ -5,11 +5,13 @@
     width:100%;
     border-top: 1px solid $gray-2;
     padding-top: 2rem;
+    //나중에 고치기
+    margin-bottom:1.5rem;
     h4{
         color: $gray-8;
         margin: {
             top: 0;
-            bottom: 0.5rem;
+            bottom:0.5rem;
         }
     }
     form{
