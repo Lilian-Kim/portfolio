@@ -1,12 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
+import 'styles/components/Tagbox.scss'
 
 const Tag = styled.div`
 margin-top: 0.5rem;
 color: #868e96;
 cursor: pointer;
+margin-right:10px;
 &:hover{
     opacity:0.5;
+}
+&:last-child{
+    margin-right:0;
 }
 `
 

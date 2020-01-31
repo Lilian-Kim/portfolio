@@ -1,2 +1,45 @@
 @import 'styles/mixin.scss';
 @import 'styles/colors.scss';
+
+.tagbox-wrapper{
+    width:100%;
+    border-top: 1px solid $gray-2;
+    padding-top: 2rem;
+    h4{
+        color: $gray-8;
+        margin: {
+            top: 0;
+            bottom: 0.5rem;
+        }
+    }
+    form{
+        border-radius: 4px;
+        overflow: hidden;
+        display: flex;
+        width: 256px;
+        border: 1px solid $gray-9;
+        input, button{
+            outline:none;
+            border: none;
+            font-size: 1rem;
+        }
+        input{
+            padding: 0.5rem;
+            flex: 1;
+            min-width:0;
+        }
+        button{
+            cursor: pointer;
+            padding: {
+                right: 1rem;
+                left: 1rem;
+            }
+            background-color:$gray-8;
+            color: #fff;
+            font-weight: bold;
+            &:hover{
+                background-color:$gray-6;
+            }
+        }
+    }
+}
