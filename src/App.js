@@ -23,8 +23,8 @@ function App() {
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
         <Route path="/write" component={WritePage}/> 
-        {/* <Route path={['/@username', '/']} exact component={PostListPage} /> */}
-        <Route path="/@:username/:postId" component={PostPage}/>    
+        {/* <Route path={['/@name', '/']} exact component={PostListPage} /> */}
+        <Route path="/@:name/:postId" component={PostPage}/>    
 
           {/* <MemoList></MemoList>
           <MemoContent></MemoContent> */}

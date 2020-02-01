@@ -21,24 +21,32 @@ color: #555;
 `
 
 
-const PostViewer = () => {
+const PostViewer = ({post, error, loading}) => {
+    if(error){
+        if(error.response && error.response.statue === 404){
+            return <div className="postviewer-wrapper">존재하지 않는 포스트입니다.</div>
+        }
+        return <div className="postviewer-wrapper">오류 발생!</div>
+    }
+    if(loading || !post){
+        return null
+    } 
+    const {title, body, user, publishedDate, tags} = post
     return(
         <div className="postviewer-wrapper">
             <div>
-                <h1>제목</h1>
+                <h1>{title}</h1>
                 <div >
                     <span>
-                        <b>tester</b>
+                        <b>{user.name}</b>
                     </span>
-                    <span>{new Date().toLocaleDateString()}</span>
+                    <span>{new Date(publishedDate).toLocaleDateString()}</span>
                 </div>
                 <Tags>
-                    <div className="tag">#태그1</div>
-                    <div className="tag">#태그2</div>
-                    <div className="tag">#태그3</div>
+                    {tags.map(tag => (<div className="tag">#{tag}</div>))}
                 </Tags>
             </div>
-            <PostContent dangerouslySetInnerHTML={{__html: '<p>HTML <b>내용</b>입니다.</p>'}} />
+            <PostContent dangerouslySetInnerHTML={{__html: body}} />
         </div>
     )
 }
