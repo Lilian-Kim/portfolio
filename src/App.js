@@ -12,16 +12,19 @@ import Home from './components/Home'
 import RegisterPage from './pages/RegisterPage'
 import WritePage from './pages/WritePage'
 import HeaderContainer from './containers/common/HeaderContainer'
+import PostPage from './pages/PostPage'
 
 function App() {
   return (
     <div className="App">
         <HeaderContainer />
         <MemoContainer>
-        <Route exact path='/'><Home /></Route>       
-        <Route path="/login"><LoginPage /></Route>        
-        <Route path="/register"><RegisterPage/></Route> 
-        <Route path="/write"><WritePage /></Route>       
+        <Route exact path='/' component={Home} />    
+        <Route path="/login" component={LoginPage} />
+        <Route path="/register" component={RegisterPage} />
+        <Route path="/write" component={WritePage}/> 
+        {/* <Route path={['/@username', '/']} exact component={PostListPage} /> */}
+        <Route path="/@:username/:postId" component={PostPage}/>    
 
           {/* <MemoList></MemoList>
           <MemoContent></MemoContent> */}
