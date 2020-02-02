@@ -14,17 +14,5 @@
             line-height: 1.5;
             margin:0;
         }
-        >div:first-of-type{
-            margin-top:1rem;
-            color: $gray-6;
-            span + span::before{
-                color: $gray-5;
-                padding: {
-                    left: 0.25rem;
-                    right:0.25rem;
-                }
-                content: '\B7';
-            }
-        }
     }
 }

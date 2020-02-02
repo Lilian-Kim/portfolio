@@ -1,0 +1,33 @@
+@import 'styles/colors.scss';
+@import 'styles/mixin.scss';
+
+.memoitem-wrapper{
+    padding: {
+        top: 3rem;
+        bottom: 3rem;
+    }
+    &:first-child{
+        padding-top:0;
+    }
+    & + & {
+        border-top: 1px solid $gray-2;
+    }
+    h2{
+        font-size: 2rem;
+        margin: {
+            top: 0;
+            bottom: 0;
+        }
+        &:hover{
+            color: $gray-6;
+        }
+    }
+    p{
+        margin-top: 2rem;
+    }
+
+}
+
+.memolist-wrapper{
+    margin-top: 3rem;
+}

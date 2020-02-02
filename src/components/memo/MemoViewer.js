@@ -1,20 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import 'styles/components/Memoviewer.scss'
+import SubInfo from 'components/common/SubInfo'
+import Tags from 'components/common/Tags'
 
 
-const Tags = styled.div`
-margin-top: 0.5rem;
-.tag{
-    display: inline-block;
-    color:#1c7ed6;
-    text-decoration:none;
-    margin-right:0.5rem;
-    &:hover{
-       color: #1864ab;
-    }
-}
-`
 const MemoContent = styled.div`
 font-size: 1.3125rem;
 color: #555;
@@ -36,15 +26,8 @@ const MemoViewer = ({memo, error, loading}) => {
         <div className="memoviewer-wrapper">
             <div>
                 <h1>{title}</h1>
-                <div >
-                    <span>
-                        <b>{user.name}</b>
-                    </span>
-                    <span>{new Date(publishedDate).toLocaleDateString()}</span>
-                </div>
-                <Tags>
-                    {tags.map(tag => (<div className="tag">#{tag}</div>))}
-                </Tags>
+                <SubInfo name={user.name} publishedDate={publishedDate} hasMarginTop/>
+                <Tags tags={tags}/>
             </div>
             <MemoContent dangerouslySetInnerHTML={{__html: body}} />
         </div>
