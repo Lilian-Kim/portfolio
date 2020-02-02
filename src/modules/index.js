@@ -5,6 +5,7 @@ import loading from './loading'
 import user, {userSaga} from './user'
 import write, {writeSaga} from './write'
 import memo, {memoSaga} from './memo'
+import memos, {memosSaga} from './memos'
 
 const rootReducer = combineReducers({
     auth,
@@ -12,9 +13,10 @@ const rootReducer = combineReducers({
     user,
     write,
     memo,
+    memos,
 })
 
 export function* rootSaga(){
-    yield all([authSaga(), userSaga(), writeSaga(), memoSaga()])
+    yield all([authSaga(), userSaga(), writeSaga(), memoSaga(), memosSaga()])
 }
 export default rootReducer

@@ -8,6 +8,7 @@ const [
     READ_MEMO_SUCCESS,
     READ_MEMO_FAILURE,
 ] = createRequestActionTypes('memo/READ_MEMO')
+
 const UNLOAD_MEMO = 'memo/UNLOAD_MEMO'
 
 export const readMemo = createAction(READ_MEMO, id => id)
