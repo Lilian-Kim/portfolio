@@ -12,7 +12,7 @@ import Home from './components/Home'
 import RegisterPage from './pages/RegisterPage'
 import WritePage from './pages/WritePage'
 import HeaderContainer from './containers/common/HeaderContainer'
-import PostPage from './pages/PostPage'
+import MemoPage from './pages/MemoPage'
 
 function App() {
   return (
@@ -23,8 +23,8 @@ function App() {
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
         <Route path="/write" component={WritePage}/> 
-        {/* <Route path={['/@name', '/']} exact component={PostListPage} /> */}
-        <Route path="/@:name/:postId" component={PostPage}/>    
+        {/* <Route path={['/@name', '/']} exact component={MemoListPage} /> */}
+        <Route path="/@:name/:memoId" component={MemoPage}/>    
 
           {/* <MemoList></MemoList>
           <MemoContent></MemoContent> */}

@@ -1,34 +1,34 @@
 import {createAction, handleActions} from 'redux-actions'
 import createRequestSaga, {createRequestActionTypes} from 'lib/createRequestSaga'
-import * as postsAPI from 'lib/api/posts'
+import * as memoAPI from 'lib/api/memo'
 import {takeLatest} from 'redux-saga/effects'
 
 const INITIALIZE = 'write/INITIALIZE'
 const CHANGE_FIELD = 'write/CHANGE_FIELD'
-const [WRITE_POST, WRITE_POST_SUCCESS, WRITE_POST_FAILURE] = createRequestActionTypes('write/WRITE_POST')
+const [WRITE_MEMO, WRITE_MEMO_SUCCESS, WRITE_MEMO_FAILURE] = createRequestActionTypes('write/WRITE_MEMO')
 
 export const initialize = createAction(INITIALIZE)
 export const changeField = createAction(CHANGE_FIELD, ({key, value}) => ({
     key,
     value,
 }))
-export const writePost = createAction(WRITE_POST, ({title, body, tags}) => ({
+export const writeMemo = createAction(WRITE_MEMO, ({title, body, tags}) => ({
     title,
     body,
     tags,
 }))
 
-const writePostSaga = createRequestSaga(WRITE_POST, postsAPI.writePost)
+const writememoSaga = createRequestSaga(WRITE_MEMO, memoAPI.writeMemo)
 export function* writeSaga(){
-    yield takeLatest(WRITE_POST, writePostSaga)
+    yield takeLatest(WRITE_MEMO, writememoSaga)
 }
 
 const initialState = {
     title: '',
     body: '',
     tags: [],
-    post: null,
-    postError: null,
+    memo: null,
+    memoError: null,
 }
 
 const write = handleActions(
@@ -38,18 +38,18 @@ const write = handleActions(
             ...state,
             [key]: value,
         }),
-        [WRITE_POST]: state => ({
+        [WRITE_MEMO]: state => ({
             ...state,
-            post:null,
-            postError:null,
+            memo:null,
+            memoError:null,
         }),
-        [WRITE_POST_SUCCESS]: (state, {payload: post}) => ({
+        [WRITE_MEMO_SUCCESS]: (state, {payload: memo}) => ({
             ...state,
-            post,
+            memo,
         }),
-        [WRITE_POST_FAILURE]: (state, {payload:postError}) => ({
+        [WRITE_MEMO_FAILURE]: (state, {payload:memoError}) => ({
             ...state,
-            postError,
+            memoError,
         })
     },
     initialState,
