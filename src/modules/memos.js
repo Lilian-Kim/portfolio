@@ -22,13 +22,15 @@ export function* memosSaga(){
 const initialState = {
     memos: null,
     error: null,
+    lastPage:1,
 }
 
 const memos = handleActions(
     {
-        [LIST_MEMOS_SUCCESS]: (state, {payload: memos}) => ({
+        [LIST_MEMOS_SUCCESS]: (state, {payload: memos, meta:response}) => ({
             ...state,
             memos,
+            lastPage: parseInt(response.headers['last-page'], 10),
         }),
         [LIST_MEMOS_FAILURE]: (state, {payload: error}) => ({
             ...state,

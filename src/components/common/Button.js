@@ -13,6 +13,12 @@ const StyledButton = styled.button`
   &:hover {
     background-color: #1864ab;
   }
+
+  &:disbled {
+    background-color: #dee2e6;
+    color: #adb5bd;
+    cursor: not-allowed;
+  }
   ${props =>
     props.fullWidth &&
     css`
