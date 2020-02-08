@@ -45,7 +45,7 @@ const RegisterForm = ({history}) => {
   useEffect(() => {
     if (authError) {
       //이미 계정이 존재
-      if (authError.response.state === 409){
+      if (authError.response.status === 409){
         //메세지 최종적으로 추후 수정하기
         setError('이미 존재하는 걔정입니다.')
         return
