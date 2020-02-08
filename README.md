@@ -14,3 +14,4 @@
 - `React.js`
 - `Sass(SCSS)`
 - `styled-components`
+- `Redux`
