@@ -5,6 +5,7 @@ import {readMemo, unloadMemo} from 'modules/memo'
 import MemoViewer from 'components/memo/MemoViewer'
 import MemoActionButtons from '../../components/memo/MemoActionbuttons'
 import { setOriginalMemo } from '../../modules/write'
+import {removeMemo} from 'lib/api/memo'
 
 const MemoViewerContainer = ({match, history}) => {
     const {memoId} = match.params
@@ -28,13 +29,22 @@ const MemoViewerContainer = ({match, history}) => {
         history.push('/write')
     }
 
+    const onRemove = async() => {
+        try{
+            await removeMemo(memoId)
+            history.push('/')
+        }catch(e){
+            console.log(e)
+        }
+    }
+
     const ownMemo = (user && user.id) === (memo && memo.user._id)
   
     return(
         // <div>
         //     <MemoViewer></MemoViewer>
         // </div>
-        <MemoViewer memo={memo} loading={loading} error={error} actionButtons={<MemoActionButtons/>} onEdit={onEdit}/>
+    <MemoViewer memo={memo} loading={loading} error={error} actionButtons={ownMemo && <MemoActionButtons onEdit={onEdit} onRemove={onRemove}/>} />
     )
 }
 

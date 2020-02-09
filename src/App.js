@@ -13,10 +13,14 @@ import WritePage from './pages/WritePage'
 import HeaderContainer from './containers/common/HeaderContainer'
 import MemoPage from './pages/MemoPage'
 import MemoListPage from './pages/MemoListPage'
+import {Helmet} from 'react-helmet-async'
 
 function App() {
   return (
     <div className="App">
+         <Helmet>
+           <title>SIMPLE MEMO</title>
+         </Helmet>
         <HeaderContainer />
         <MemoContainer>
         <Route exact path='/' component={Home} />    

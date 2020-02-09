@@ -20,3 +20,5 @@ export const updateMemo = ({id, title, body, tags}) => client.patch(`/api/posts/
 {title,
 body,
 tags,})
+
+export const removeMemo = id => client.delete(`/api/posts/${id}`)
