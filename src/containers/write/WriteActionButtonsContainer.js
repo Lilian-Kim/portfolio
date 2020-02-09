@@ -2,18 +2,22 @@ import React, {useEffect} from 'react'
 import WriteActionButtons from 'components/write/WriteActionButtons'
 import {useSelector, useDispatch} from 'react-redux'
 import {withRouter} from 'react-router-dom'
-import {writeMemo} from 'modules/write'
+import {writeMemo, updateMemo} from 'modules/write'
 
 const WriteActionButtonsContainer = ({history}) => {
     const dispatch = useDispatch()
-    const {title, body, tags, memo, memoError} = useSelector(({write}) => ({
+    const {title, body, tags, memo, memoError, originalMemoId} = useSelector(({write}) => ({
         title: write.title,
         body: write.body,
         tags: write.tags,
         memo: write.memo,
         memoError: write.memoError,
+        originalMemoId:write.originalMemoId,
     }))
     const onPublish = () => {
+        if(originalMemoId){
+            dispatch(updateMemo({title, body, tags, id: originalMemoId}))
+        }
         dispatch(
             writeMemo({
                 title,
@@ -38,7 +42,7 @@ const WriteActionButtonsContainer = ({history}) => {
         }
     }, [history, memo, memoError])
     return(
-        <WriteActionButtons onPublish={onPublish} onCancle={onCancle}/>
+        <WriteActionButtons onPublish={onPublish} onCancle={onCancle} idsEdit={!!originalMemoId}/>
     )
 }
 

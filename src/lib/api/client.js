@@ -4,7 +4,7 @@ const client = axios.create()
 
 const token = localStorage.token
 //헤더 설정
-client.defaults.headers.common['Authorization'] = `Bearer ${token}`
+// client.defaults.headers.common['Authorization'] = `Bearer ${token}`
 
 /*
 //api 주소를 다른 곳으로 사용함

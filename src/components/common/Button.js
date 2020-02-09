@@ -14,11 +14,6 @@ const StyledButton = styled.button`
     background-color: #1864ab;
   }
 
-  &:disbled {
-    background-color: #dee2e6;
-    color: #adb5bd;
-    cursor: not-allowed;
-  }
   ${props =>
     props.fullWidth &&
     css`
@@ -35,6 +30,12 @@ const StyledButton = styled.button`
         background-color: #868e96;
       }
     `}
+    
+  &:disabled {
+    background-color: #dee2e6;
+    color: #adb5bd;
+    cursor: not-allowed;
+  }
 `
 
 const Button = props => <StyledButton {...props} />

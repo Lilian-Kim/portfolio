@@ -10,9 +10,9 @@ const Header = ({ user, onLogout}) => {
   return (
     <div className="memo-header clear">
       <div>
-        <button onClick={toggleClick} className={toggle ? 'close' : 'open'}>
+        {/* <button onClick={toggleClick} className={toggle ? 'close' : 'open'}>
           {toggle ? '닫기' : '열기'}
-        </button>
+        </button> */}
       </div>
       <div className="left">
         <Link to="/">Simple Memo</Link>

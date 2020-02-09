@@ -15,6 +15,7 @@ export const readMemo = createAction(READ_MEMO, id => id)
 export const unloadMemo = createAction(UNLOAD_MEMO)
 
 const readMemoSaga = createRequestSaga(READ_MEMO, memoAPI.readMemo)
+
 export function* memoSaga(){
     yield takeLatest(READ_MEMO, readMemoSaga)
 }

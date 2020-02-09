@@ -20,11 +20,11 @@ font-size:1rem;
 }
 `
 
-const WriteActionButtons = ({onCancel, onPublish}) => {
+const WriteActionButtons = ({onCancel, onPublish, isEdit}) => {
     return(
         <WriteActionButtonWrapper>
             <StyledButton cyan onClick={onPublish}>
-                등록
+                포스트 {isEdit ? '수정' : '등록'}
             </StyledButton>
             <StyledButton onCancel={onCancel}>취소</StyledButton>
         </WriteActionButtonWrapper>

@@ -3,9 +3,9 @@ import client from './client'
 
 
 export const writeMemo = ({title, body, tags}) => 
-client.post('./api/memo', {title, body, tags})
+client.post('/api/posts', {title, body, tags})
 
-export const readMemo = id => client.get( `/api/memo/${id}`)
+export const readMemo = id => client.get( `/api/posts/${id}`)
 
 export const listMemos = ({page, name, tag}) => {
     const queryString = qs.stringify({
@@ -13,5 +13,10 @@ export const listMemos = ({page, name, tag}) => {
         name,
         tag,
     })
-    return client.get(`api/memo?${queryString}`)
+    return client.get(`api/posts?${queryString}`)
 }
+
+export const updateMemo = ({id, title, body, tags}) => client.patch(`/api/posts/${id}`, 
+{title,
+body,
+tags,})

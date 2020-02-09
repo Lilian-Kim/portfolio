@@ -13,7 +13,7 @@ const MemoItem = ({ memo }) => {
       <h2>
         <Link to={`/@${user.name}/${_id}`}>{title}</Link>
       </h2>
-      <SubInfo name={user.name} publishedDate={new Date()} />
+      <SubInfo name={user.name} publishedDate={new Date(publishedDate)} />
       <Tags tags={tags} />
       <p>{body}</p>
     </div>
@@ -25,18 +25,18 @@ const MemoList = ({ memos, loading, error, showWriteButton }) => {
     return <div className="memolist-wrapper">에러가 발생했습니다.</div>
   }
   return (
-    <div className="memolist-wrappert">
+    <div className="memolist-wrapper">
       <div className="buton-wrapper">
         {showWriteButton && (
-          <Button cyan to="/write">
+          <Link to="/write">
             새 메모 쓰기
-          </Button>
+          </Link>
         )}
       </div>
       {!loading && memos && (
         <div>
           {memos.map(memo => (
-            <MemoItem memp={memo} key={memo._id} />
+            <MemoItem memo={memo} key={memo._id} />
           ))}
         </div>
       )}
