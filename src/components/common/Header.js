@@ -23,7 +23,7 @@ const Header = ({ user, onLogout}) => {
             <>
               <li>{user.name}</li>
               <li>
-                <NavLink onClick={onLogout}>로그아웃</NavLink>
+                <NavLink to="/logout" onClick={onLogout}>로그아웃</NavLink>
               </li>
             </>
           ) : (
