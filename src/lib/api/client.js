@@ -2,12 +2,13 @@ import axios from 'axios'
 
 const client = axios.create()
 
+const token = localStorage.token
+//헤더 설정
+client.defaults.headers.common['Authorization'] = `Bearer ${token}`
+
 /*
 //api 주소를 다른 곳으로 사용함
 client.defaults.baseURL = 'https://external-api-server.com/'
-
-//헤더 설정
-client.defaults.headers.common['Authorization'] = 'Bearer a1b2c3d4'
 
 //인터셉터 설정
 axios.intercepter.response.use(\
