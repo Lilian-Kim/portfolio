@@ -16,7 +16,6 @@ align-items: center;
 `
 
 const AskModalWrapper = styled.div`
-z-index:9999;
 width: 320px;
 background: #fff;
 padding:1.5rem;
@@ -32,7 +31,6 @@ p{
 .buttons{
     display:flex;
     justify-content:flex-end;
-    border: 1px solid red !important;
 }
 `
 
@@ -52,19 +50,21 @@ const AskModal = ({
     onConfirm,
     onCancel,
 }) => {
-    if(!visible) return null
+    if(!visible){
+        // console.log('test')
+        console.log(title)
+        return null
+    }
+    
     return(
         <Fullscreen>
             <AskModalWrapper>
-                test
-            <AskModal>
                 <h2>{title}</h2>
                 <p>{description}</p>
                 <div className="buttons">
                     <StyledButton onClick={onCancel}>{cancelText}</StyledButton>
                     <StyledButton cyan onClick={onConfirm}>{confirmText}</StyledButton>
                 </div>
-            </AskModal>
             </AskModalWrapper>
         </Fullscreen>
     )
