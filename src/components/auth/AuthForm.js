@@ -74,7 +74,7 @@ const AuthForm = ({ type, form, onChange, onSubmit, error }) => {
           type="password"
         />
         {error && <ErrorMessage>{error}</ErrorMessage>}
-        <ButtonWidthMarginTop cyan fullWidth>
+        <ButtonWidthMarginTop fullWidth>
           {text}
         </ButtonWidthMarginTop>
         <AuthFooter>

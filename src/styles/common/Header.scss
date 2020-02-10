@@ -97,6 +97,10 @@ nav {
                     background-color: $gray-9;
                     color: #fff;
                     border: 1px solid $gray-9;
+                    &:hover{
+                        background-color:$gray-7;
+                        border:1px solid $gray-7;
+                    }
                 }
             }
         }

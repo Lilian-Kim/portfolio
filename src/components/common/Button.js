@@ -6,12 +6,12 @@ const StyledButton = styled.button`
   border-radius: 2px;
   fonst-size: 1rem;
   padding: 0.25rem 1rem;
-  color: white;
+  color: #fff;
   outline: none;
   cursor: pointer;
-  background-color: #1971c2;
+  background-color: #212529;
   &:hover {
-    background-color: #1864ab;
+    background-color: #495057;
   }
 
   ${props =>
