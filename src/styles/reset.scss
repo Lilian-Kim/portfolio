@@ -11,7 +11,8 @@
 html,
 body {
     font-family: 'Noto Sans KR', 'notokr', 'Nanum Gothic', 'sans-serif';
-    color: #333;
+    color: #555;
+    font-size:14px;
 }
 
 a {
@@ -41,6 +42,10 @@ table {
 ol,
 ul {
     list-style: none;
+}
+
+button{
+    outline: none;
 }
 
 // common class

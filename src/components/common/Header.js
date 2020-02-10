@@ -18,10 +18,11 @@ const Header = ({ user, onLogout}) => {
        <Link to="/">
       <div className="main-logo clear">
         <span>로고</span>
-        <span>Simple Memo</span>
+        <span>simple memo</span>
       </div>
       </Link>
-      <nav className="">
+      <button onClick={toggleClick}>토글버튼</button>
+      <nav  className={toggle ? 'close' : 'open'}>
         <ul>
           {user ? (
             <>
