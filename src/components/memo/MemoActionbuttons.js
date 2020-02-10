@@ -48,7 +48,7 @@ const MemoActionButtons = ({onEdit, onRemove}) => {
             <ActionButton onClick={onEdit}>수정</ActionButton>
             <ActionButton onClick={onRemoveClick}>삭제</ActionButton>
         </MemoActionButtonsWrapper>
-        <AskRemoveModal visible={modal} onConfirm={onConfirm} onCancel={oncancel} />
+        <AskRemoveModal visible={modal} onConfirm={onConfirm} onCancel={onCancel} />
         </>
     )
 }

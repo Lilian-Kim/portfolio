@@ -17,6 +17,7 @@ const MemoViewerContainer = ({match, history}) => {
         user:user.user,
     }))
 
+
     useEffect(() => {
         dispatch(readMemo(memoId))
         return () => {
@@ -39,12 +40,11 @@ const MemoViewerContainer = ({match, history}) => {
     }
 
     const ownMemo = (user && user.id) === (memo && memo.user._id)
-  
+
     return(
-        // <div>
-        //     <MemoViewer></MemoViewer>
-        // </div>
+        <div>
     <MemoViewer memo={memo} loading={loading} error={error} actionButtons={ownMemo && <MemoActionButtons onEdit={onEdit} onRemove={onRemove}/>} />
+    </div>
     )
 }
 

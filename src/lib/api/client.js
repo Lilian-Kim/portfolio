@@ -2,7 +2,7 @@ import axios from 'axios'
 
 const client = axios.create()
 
-const token = localStorage.token
+// const token = localStorage.token
 //헤더 설정
 // client.defaults.headers.common['Authorization'] = `Bearer ${token}`
 

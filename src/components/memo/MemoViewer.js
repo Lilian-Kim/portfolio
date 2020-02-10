@@ -12,7 +12,6 @@ color: #555;
 
 
 const MemoViewer = ({memo, error, loading, actionButtons}) => {
-    
     if(error){
         if(error.response && error.response.statue === 404){
             return <div className="memoviewer-wrapper">존재하지 않는 포스트입니다.</div>
@@ -20,12 +19,13 @@ const MemoViewer = ({memo, error, loading, actionButtons}) => {
         return <div className="memoviewer-wrapper">오류 발생!</div>
     }
     if(loading || !memo){
+        console.log(memo)
         return null
     } 
     const {title, body, user, publishedDate, tags} = memo
+
     return(     
         <div className="memoviewer-wrapper">
-            {/* 앙뇽 */}
             <div>
                 <h1>{title}</h1>
                 <SubInfo name={user.name} publishedDate={publishedDate} hasMarginTop/>

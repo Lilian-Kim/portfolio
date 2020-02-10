@@ -5,7 +5,7 @@ import client from './client'
 export const writeMemo = ({title, body, tags}) => 
 client.post('/api/posts', {title, body, tags})
 
-export const readMemo = id => client.get( `/api/posts/${id}`)
+export const readMemo = id => client.get(`/api/posts/${id}`)
 
 export const listMemos = ({page, name, tag}) => {
     const queryString = qs.stringify({
