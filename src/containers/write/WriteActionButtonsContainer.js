@@ -12,8 +12,9 @@ const WriteActionButtonsContainer = ({history}) => {
         tags: write.tags,
         memo: write.memo,
         memoError: write.memoError,
-        originalMemoId:write.originalMemoId,
-    }))
+        originalMemoId: write.originalMemoId,
+    }),
+    )
     const onPublish = () => {
         if(originalMemoId){
             dispatch(updateMemo({title, body, tags, id: originalMemoId}))
@@ -42,9 +43,7 @@ const WriteActionButtonsContainer = ({history}) => {
         }
     }, [history, memo, memoError])
     return(
-        <>
         <WriteActionButtons onPublish={onPublish} onCancel={onCancel} isEdit={!!originalMemoId}/>
-        </>
     )
 }
 

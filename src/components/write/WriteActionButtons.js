@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Button from 'components/common/Button'
 
-const WriteActionButtonWrapper = styled.div`
+const WriteActionButtonsWrapper = styled.div`
 width:100%;
 text-align:center;
 margin-top: 1rem;
@@ -22,14 +22,12 @@ font-size:1rem;
 
 const WriteActionButtons = ({onCancel, onPublish, isEdit}) => {
     return(
-        <WriteActionButtonWrapper>
+        <WriteActionButtonsWrapper>
             <StyledButton cyan onClick={onPublish}>
                 포스트 {isEdit ? '수정' : '등록'}
             </StyledButton>
             <StyledButton onCancel={onCancel}>취소</StyledButton>
-        </WriteActionButtonWrapper>
-
-
+        </WriteActionButtonsWrapper>
     )
 }
 

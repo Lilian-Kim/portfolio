@@ -4,20 +4,21 @@ import Button from './Button'
 
 const Fullscreen = styled.div`
 position: fixed;
-z-index: 30;
+z-index: 9999;
 top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: rbga(0,0,0, 0.25);
-display: flex,
+background-color: rgba(0,0,0, 0.25);
+display: flex;
 justify-content: center;
 align-items: center;
 `
 
 const AskModalWrapper = styled.div`
+z-index:9999;
 width: 320px;
-background: white;
+background: #fff;
 padding:1.5rem;
 border-radius: 4px;
 box-shadow: 0px 0px 8px rgba(0,0,0,0.125);
@@ -31,6 +32,7 @@ p{
 .buttons{
     display:flex;
     justify-content:flex-end;
+    border: 1px solid red !important;
 }
 `
 
@@ -54,6 +56,7 @@ const AskModal = ({
     return(
         <Fullscreen>
             <AskModalWrapper>
+                test
             <AskModal>
                 <h2>{title}</h2>
                 <p>{description}</p>

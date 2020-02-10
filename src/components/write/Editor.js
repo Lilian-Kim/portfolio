@@ -48,7 +48,6 @@ const Editor = ({title, body, onChangeField}) => {
             <div className="quill-wrapper">
                 <div ref={quillElement}/>
             </div>
-
         </div>
     )
 }

@@ -61,7 +61,6 @@ export function* writeSaga() {
     yield takeLatest(UPDATE_MEMO, updateMemoSaga)
 }
 
-
 const initialState = {
     title: '',
     body: '',
@@ -115,7 +114,7 @@ const write = handleActions({
         [UPDATE_MEMO_FAILURE] : (state, {payload:memoError}) => ({
             ...state,
             memoError,
-        })
+        }),
     },
     initialState,
 )
