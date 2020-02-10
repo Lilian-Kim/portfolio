@@ -8,15 +8,19 @@ const Header = ({ user, onLogout}) => {
   const toggleClick = () => setToggle(!toggle)
 
   return (
-    <div className="memo-header clear">
-      <div>
-        {/* <button onClick={toggleClick} className={toggle ? 'close' : 'open'}>
+    <div className="memo-header">
+      {/* <div className="left">
+        <button onClick={toggleClick} className={toggle ? 'close' : 'open'}>
           {toggle ? '닫기' : '열기'}
-        </button> */}
+        </button>
+        로고
+      </div> */}
+       <Link to="/">
+      <div className="main-logo clear">
+        <span>로고</span>
+        <span>Simple Memo</span>
       </div>
-      <div className="left">
-        <Link to="/">Simple Memo</Link>
-      </div>
+      </Link>
       <nav className="">
         <ul>
           {user ? (

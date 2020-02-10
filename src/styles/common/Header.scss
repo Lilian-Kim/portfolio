@@ -10,40 +10,61 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index:9999;
-    background-color:#fff;
-    > div {
-        &:first-child{
-        display: none;
-        @include tablet{
-            display: block;
-        }
-      }
-      &:nth-child(2){
-          position: absolute;
-          top:50%;
-          transform:translateY(-50%);
-      }
-    }
-    nav {
+    z-index: 9999;
+    background-color: #fff;
+
+    .main-logo {
+        // display: none;
+        // @include tablet{
+        //     display: block;
+        // }
         position: absolute;
-        top:50%;
-        right:5%;
-        transform:translateY(-50%);
-        
-        ul {
+        top: 50%;
+        left: 30px;
+        transform: translateY(-50%);
+        >span {
             display: block;
+            float:left;
+            &:first-child{
+            text-indent: -9999px;
+            font-size: 0;
+            width: 40px;
+            height: 40px;
+            @include background-img('https://img.icons8.com/pastel-glyph/80/000000/create-new--v1.png', center, no-repeat, contain)
+        }
+        &:last-child{
+            margin-top:10px;
+            margin-left:10px;
+        }
+        }
+    }
 
-            &::after {
-                content: '';
-                display: block;
-                clear: both;
-            }
+    //   &:nth-child(2){
+    //       position: absolute;
+    //       top:50%;
+    //       left:8%;
+    //       transform:translateY(-50%);
+    //   }
+}
 
-            li {
-                display: inline-block;
-                padding: 0 10px;
-            }
+nav {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+
+    ul {
+        display: block;
+
+        &::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        li {
+            display: inline-block;
+            padding: 0 10px;
         }
     }
 }

@@ -53,8 +53,9 @@ $mobile-s-width		: 375px;
 }
 
 //background
-@mixin background-img($position, $repeat, $size){
+@mixin background-img($url, $position, $repeat, $size){
 	background: {
+		image: url($url);
 		position: $position;
 		repeat: $repeat;
 		size: $size;
