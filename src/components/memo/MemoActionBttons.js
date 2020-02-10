@@ -1,6 +1,7 @@
 import React, {useState, useCallback} from 'react'
 import styled from 'styled-components'
 import AskRemoveModal from './AskRemoveModal'
+import WriteActionButtonsContainer from '../../containers/write/WriteActionButtonsContainer'
 
 const MemoActionButtonsWrapper = styled.div`
 display:flex;
@@ -9,7 +10,7 @@ margin-bottom: 2rem;
 margin-top: -1.5rem
 `
 
-const ActionButton = styled.button`
+const ActionButtons = styled.button`
 padding: 0.25rem 0.5rem;
 border-radius: 4px;
 color: #868e96;
@@ -45,8 +46,9 @@ const MemoActionButtons = ({onEdit, onRemove}) => {
     return(
         <>
         <MemoActionButtonsWrapper>
-            <ActionButton onClick={onEdit}>수정</ActionButton>
-            <ActionButton onClick={onRemoveClick}>삭제</ActionButton>
+            <ActionButtons onClick={onEdit}>수정</ActionButtons>
+            <ActionButtons onClick={onRemoveClick}>삭제</ActionButtons>
+            <WriteActionButtonsContainer/>
         </MemoActionButtonsWrapper>
         <AskRemoveModal visible={modal} onConfirm={onConfirm} onCancel={onCancel} />
         </>

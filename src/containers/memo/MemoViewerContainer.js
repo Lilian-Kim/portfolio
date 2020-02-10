@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import {readMemo, unloadMemo} from 'modules/memo'
 import MemoViewer from 'components/memo/MemoViewer'
-import MemoActionButtons from '../../components/memo/MemoActionbuttons'
+import MemoActionButtons from '../../components/memo/MemoActionBttons'
 import { setOriginalMemo } from '../../modules/write'
 import {removeMemo} from 'lib/api/memo'
 
@@ -39,7 +39,7 @@ const MemoViewerContainer = ({match, history}) => {
         }
     }
 
-    const ownMemo = (user && user.id) === (memo && memo.user._id)
+    const ownMemo = (user && user._id) === (memo && memo.user._id)
 
     return(
         <div>

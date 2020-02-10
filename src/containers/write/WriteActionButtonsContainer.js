@@ -42,7 +42,9 @@ const WriteActionButtonsContainer = ({history}) => {
         }
     }, [history, memo, memoError])
     return(
-        <WriteActionButtons onPublish={onPublish} onCancel={onCancel} idsEdit={!!originalMemoId}/>
+        <>
+        <WriteActionButtons onPublish={onPublish} onCancel={onCancel} isEdit={!!originalMemoId}/>
+        </>
     )
 }
 

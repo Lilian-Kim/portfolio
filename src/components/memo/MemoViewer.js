@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import 'styles/components/Memoviewer.scss'
 import SubInfo from 'components/common/SubInfo'
 import Tags from 'components/common/Tags'
+import MemoActionButtons from './MemoActionBttons'
 
 
 const MemoContent = styled.div`
@@ -19,7 +20,6 @@ const MemoViewer = ({memo, error, loading, actionButtons}) => {
         return <div className="memoviewer-wrapper">오류 발생!</div>
     }
     if(loading || !memo){
-        console.log(memo)
         return null
     } 
     const {title, body, user, publishedDate, tags} = memo
