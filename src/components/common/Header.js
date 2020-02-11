@@ -22,7 +22,7 @@ const Header = ({ user, onLogout}) => {
       </div>
       </Link>
       <button onClick={toggleClick}>토글버튼</button>
-      <nav  className={toggle ? 'close' : 'open'}>
+      <nav  className={toggle ? 'open' : 'close'}>
         <ul>
           {user ? (
             <>

@@ -4,11 +4,13 @@ import 'styles/components/Memoviewer.scss'
 import SubInfo from 'components/common/SubInfo'
 import Tags from 'components/common/Tags'
 import MemoActionButtons from './MemoActionButtons'
+import {Link} from 'react-router-dom'
 
 
 const MemoContent = styled.div`
 font-size: 1rem;
 color: #555;
+min-height:500px;
 `
 
 
@@ -33,6 +35,7 @@ const MemoViewer = ({memo, error, loading, actionButtons}) => {
             </div>
             {actionButtons}
             <MemoContent dangerouslySetInnerHTML={{__html: body}} />
+            <Link to ="/" className="list-button">목록</Link>
         </div>
     )
 }

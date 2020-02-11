@@ -23,7 +23,8 @@ const SubInfo = ({ name, publishedDate, hasMarginTop }) => {
     <SubInfoWrapper hasMarginTop={hasMarginTop}>
       <span>
         <b>
-          <Link to={`/@${name}`}>{name}</Link>
+          {/* <Link to={`/@${name}`}>{name}</Link> */}
+          <Link to={`/?name=${name}`}>{name}</Link>
         </b>
       </span>
       <span>{new Date(publishedDate).toLocaleDateString()}</span>

@@ -35,19 +35,19 @@ $mobile-s-width		: 375px;
 }
 // 모바일 large
 @mixin mobile-large {
-	@media screen and (max-width: #{$mob-l-width}) {
+	@media screen and (max-width: #{$mobile-l-width}) {
 		@content;
 	}
 }
 // 모바일 mid
 @mixin mobile-mid {
-	@media screen and (max-width: #{$mob-m-width}) {
+	@media screen and (max-width: #{$mobile-m-width}) {
 		@content;
 	}
 }
 // 모바일 small
 @mixin mobile-small {
-	@media screen and (max-width: #{$mob-s-width}) {
+	@media screen and (max-width: #{$mobile-s-width}) {
 		@content;
 	}
 }
