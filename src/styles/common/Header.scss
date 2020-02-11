@@ -26,7 +26,6 @@
         >span {
             display: block;
             float: left;
-
             &:first-child {
                 text-indent: -9999px;
                 font-size: 0;
@@ -34,12 +33,12 @@
                 height: 36px;
                 @include background-img('https://img.icons8.com/pastel-glyph/80/000000/create-new--v1.png', center, no-repeat, contain)
             }
-
-            &:last-child {
-                margin-top: 7px;
-                margin-left: 10px;
-                font-weight: bold;
-            }
+        }
+        
+        h1 {
+            float:left;
+            margin-left: 10px;
+            font-weight: bold;
         }
     }
 

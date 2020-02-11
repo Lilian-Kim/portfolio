@@ -23,11 +23,11 @@ function App() {
          </Helmet>
         <HeaderContainer />
         <MemoContainer>
-        <Route exact path='/' component={Home} />    
+        {/* <Route exact path='/' component={Home} />     */}
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
         <Route path="/write" component={WritePage}/> 
-        <Route path="/@:name" exact component={MemoListPage} />
+        <Route path={['/@:name']} exact component={MemoListPage} />
         <Route path="/@:name/:memoId" component={MemoPage}/>    
 
           {/* <MemoList></MemoList>

@@ -18,7 +18,7 @@ const Header = ({ user, onLogout}) => {
        <Link to="/">
       <div className="main-logo clear">
         <span>로고</span>
-        <span>simple memo</span>
+        <h1>simple memo</h1>
       </div>
       </Link>
       <button onClick={toggleClick}>토글버튼</button>

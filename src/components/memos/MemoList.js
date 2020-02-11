@@ -34,7 +34,7 @@ const MemoList = ({ memos, loading, error, showWriteButton }) => {
         )}
       </div>
       {!loading && memos && (
-        <div>
+        <div className="clear">
           {memos.map(memo => (
             <MemoItem memo={memo} key={memo._id} />
           ))}
