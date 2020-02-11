@@ -25,11 +25,11 @@ const MemoList = ({ memos, loading, error, showWriteButton }) => {
     return <div className="memolist-wrapper">에러가 발생했습니다.</div>
   }
   return (
-    <div className="memolist-wrapper">
+    <div className="memolist-wrapper clear">
       <div className="buton-wrapper">
         {showWriteButton && (
           <Link to="/write">
-            새 메모 쓰기
+            새 메모
           </Link>
         )}
       </div>
