@@ -17,13 +17,19 @@
         // border-top: 1px solid $gray-2;
     }
     h2{
-        font-size: 2rem;
+        font-size: 1.5rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         margin: {
             top: 0;
             bottom: 0;
         }
         &:hover{
             color: $gray-6;
+        }
+        a{
+  
         }
     }
     p{
@@ -34,7 +40,9 @@
 }
 
 .memolist-wrapper{
-    margin-top: 3rem;
+    // margin-top: 3rem;
+    width:95%;
+    margin:0 auto;
     >div:first-child{
         text-align: right;
         margin-bottom:2rem;

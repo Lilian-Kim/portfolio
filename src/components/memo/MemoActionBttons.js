@@ -21,7 +21,7 @@ font-size: 0.875rem;
 cursor:pointer;
 &:hover{
     background-color: #f1f3f5;
-    color: #1c7ed6;;
+    color: #212529;;
 }
 
 & + & {

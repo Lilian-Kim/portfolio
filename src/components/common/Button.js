@@ -23,11 +23,13 @@ const StyledButton = styled.button`
       font-size: 1.125rem;
     `}
   ${props =>
-    props.cyan &&
+    props.white &&
     css`
-      background-color: #343a40;
+      background-color: #e9ecef;
+      border:1px solid #212529;
+      color:#555;
       &:hover {
-        background-color: #868e96;
+        background-color: #fff;
       }
     `}
     

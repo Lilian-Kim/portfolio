@@ -7,7 +7,7 @@ import MemoActionButtons from './MemoActionBttons'
 
 
 const MemoContent = styled.div`
-font-size: 1.3125rem;
+font-size: 1rem;
 color: #555;
 `
 

@@ -27,7 +27,7 @@ function App() {
         <Route path="/login" component={LoginPage} />
         <Route path="/register" component={RegisterPage} />
         <Route path="/write" component={WritePage}/> 
-        <Route path={['/@:name']} exact component={MemoListPage} />
+        <Route path={['/@:name', '/']} exact component={MemoListPage} />
         <Route path="/@:name/:memoId" component={MemoPage}/>    
 
           {/* <MemoList></MemoList>

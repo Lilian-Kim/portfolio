@@ -62,8 +62,8 @@ const AskModal = ({
                 <h2>{title}</h2>
                 <p>{description}</p>
                 <div className="buttons">
-                    <StyledButton onClick={onCancel}>{cancelText}</StyledButton>
-                    <StyledButton cyan onClick={onConfirm}>{confirmText}</StyledButton>
+                    <StyledButton white onClick={onCancel}>{cancelText}</StyledButton>
+                    <StyledButton onClick={onConfirm}>{confirmText}</StyledButton>
                 </div>
             </AskModalWrapper>
         </Fullscreen>

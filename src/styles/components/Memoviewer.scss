@@ -4,13 +4,15 @@
 
 .memoviewer-wrapper{
     //margin top값 추후 수정
-    margin-top: 6rem;
+    margin:0 auto;
+    padding-top:2rem;
+    width:95%;
     >div:first-child{
         border-bottom: 1px solid $gray-2;
         padding-bottom: 3rem;
         margin-bottom: 3rem;
         h1{
-            font-size: 3rem;
+            font-size: 2rem;
             line-height: 1.5;
             margin:0;
         }
