@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {withRouter} from 'react-router-dom'
 import {readMemo, unloadMemo} from 'modules/memo'
 import MemoViewer from 'components/memo/MemoViewer'
-import MemoActionButtons from '../../components/memo/MemoActionBttons'
+import MemoActionButtons from '../../components/memo/MemoActionButtons'
 import { setOriginalMemo } from '../../modules/write'
 import {removeMemo} from 'lib/api/memo'
 

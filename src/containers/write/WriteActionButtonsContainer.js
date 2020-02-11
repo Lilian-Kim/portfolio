@@ -18,6 +18,7 @@ const WriteActionButtonsContainer = ({history}) => {
     const onPublish = () => {
         if(originalMemoId){
             dispatch(updateMemo({title, body, tags, id: originalMemoId}))
+            return
         }
         dispatch(
             writeMemo({

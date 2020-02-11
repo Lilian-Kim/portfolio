@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import 'styles/components/Memoviewer.scss'
 import SubInfo from 'components/common/SubInfo'
 import Tags from 'components/common/Tags'
-import MemoActionButtons from './MemoActionBttons'
+import MemoActionButtons from './MemoActionButtons'
 
 
 const MemoContent = styled.div`
