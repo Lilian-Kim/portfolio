@@ -2,7 +2,7 @@ import React,{useRef, useEffect} from 'react'
 import Quill from 'quill'
 import 'quill/dist/quill.bubble.css'
 import styled from 'styled-components'
-import 'styles/components/Editor.scss'
+import 'styles/components/editor.scss'
 
 const Editor = ({title, body, onChangeField}) => {
     const quillElement = useRef(null)
