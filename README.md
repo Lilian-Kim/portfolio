@@ -43,9 +43,8 @@
 **삭제모달**
 ![삭제모달](./img/my_memo_modal.png)
 
-**모바일 로그인폼**
-![모바일 로그인](./img/mobile_login_form.png)
 
-**모바일 로그인후**
-![모바일 로그인 후](./img/mobile_after_login.png)
+**모바일**  
+
+![모바일 로그인](./img/mobile_login_form.png) ![모바일 로그인 후](./img/mobile_after_login.png)
 
