@@ -52,7 +52,6 @@ const LoginForm = ({ history }) => {
   useEffect(() => {
     if (user) {
       history.push('/')
-      console.log('얘는 언제 뜨는 거?---------------')
       try{
         localStorage.setItem('user', JSON.stringify(user))
       }catch(e){
